@@ -33,6 +33,7 @@ public class Frogger {
     // TODO: Do you notice any issues of here?
     public boolean isOccupied(int position) {
         boolean[] occupied = this.road.getOccupied();
+        // road to check occupied
         return occupied[position];
     }
 

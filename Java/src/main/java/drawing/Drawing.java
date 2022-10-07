@@ -17,6 +17,7 @@ import java.util.List;
 public class Drawing {
 
     public List<Shape> shapes;
+    //turn to private
 
     public Drawing(List<Shape> shapes) {
         this.shapes = shapes;
@@ -36,6 +37,7 @@ public class Drawing {
                     // TODO: What is the issue of the behavior here?
                     Line[] lines = shape.toLines();
                     shape.draw(writer, lines);
+                    //shape.tolines() and shape.draw(lines) violate law of demeter
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -50,6 +52,8 @@ public class Drawing {
                 e.printStackTrace();
             }
         }
+        //duplicated code
+        //for writer: poor extensibility
     }
 }
 
